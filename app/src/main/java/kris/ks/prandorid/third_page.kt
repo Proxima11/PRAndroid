@@ -2,7 +2,9 @@ package kris.ks.prandorid
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -28,6 +30,18 @@ class third_page : AppCompatActivity() {
             }
             startActivity(intenttoBack)
         }
+
+        var hist : ArrayList<String> = arrayListOf()
+
+        for(data in dataHistory){
+            hist.add(data.result.toString() + "\n" + data.operation)
+        }
+
+        var mListView = findViewById <ListView>(R.id.listHist)
+        val arrayAdapter: ArrayAdapter<*>
+        arrayAdapter = ArrayAdapter(this,
+            android.R.layout.simple_list_item_1, hist)
+        mListView.adapter = arrayAdapter
     }
 
 
