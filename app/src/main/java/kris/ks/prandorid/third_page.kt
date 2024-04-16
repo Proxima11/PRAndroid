@@ -9,6 +9,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class third_page : AppCompatActivity() {
+    companion object{
+        val dataHistory : ArrayList<HistoryCalc> = arrayListOf()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -21,7 +25,6 @@ class third_page : AppCompatActivity() {
         var _btnBack = findViewById<Button>(R.id.Back2)
         _btnBack.setOnClickListener {
             val intenttoBack = Intent(this@third_page, MainActivity::class.java).apply {
-
             }
             startActivity(intenttoBack)
         }

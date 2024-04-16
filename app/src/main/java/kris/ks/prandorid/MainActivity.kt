@@ -25,10 +25,12 @@ class MainActivity : AppCompatActivity() {
 
         var _btnSum = findViewById<Button>(R.id.summary)
         _btnSum.setOnClickListener {
-            val intentRes = Intent(this@MainActivity, second_page::class.java).apply {
-
+            if (!operation.equals("") && !operation[operation.length-1].equals('+') && !operation[operation.length-1].equals('-') && !operation[operation.length-1].equals('x') && !operation[operation.length-1].equals('/') && (operation.contains('+') || operation.contains('-') || operation.contains('x') || operation.contains('/'))){
+                val intentRes = Intent(this@MainActivity, second_page::class.java).apply {
+                    putExtra(second_page.res, operation)
+                }
+                startActivity(intentRes)
             }
-            startActivity(intentRes)
         }
 
         var _btnHist = findViewById<Button>(R.id.history2)
