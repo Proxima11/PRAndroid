@@ -104,7 +104,7 @@ class MainActivity : AppCompatActivity() {
 
         var _btnMultiply = findViewById<Button>(R.id.multiple)
         _btnMultiply.setOnClickListener {
-            if (!operation.equals("") || !operation[operation.length-1].equals("+") || !operation[operation.length-1].equals("-") || !operation[operation.length-1].equals("x") || !operation[operation.length-1].equals("/")){
+            if (!operation.equals("") && !operation[operation.length-1].equals('+') && !operation[operation.length-1].equals('-') && !operation[operation.length-1].equals('x') && !operation[operation.length-1].equals('/')){
                 operation += "x"
                 display.setText(operation)
             }
@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
 
         var _btnMinus = findViewById<Button>(R.id.minus)
         _btnMinus.setOnClickListener {
-            if (!operation.equals("") || !operation[operation.length-1].equals("+") || !operation[operation.length-1].equals("-") || !operation[operation.length-1].equals("x") || !operation[operation.length-1].equals("/")){
+            if (!operation.equals("") && !operation[operation.length-1].equals('+') && !operation[operation.length-1].equals('-') && !operation[operation.length-1].equals('x') && !operation[operation.length-1].equals('/')){
                 operation += "-"
                 display.setText(operation)
             }
@@ -120,7 +120,7 @@ class MainActivity : AppCompatActivity() {
 
         var _btnPlus = findViewById<Button>(R.id.plus)
         _btnPlus.setOnClickListener {
-            if (!operation.equals("") || !operation[operation.length-1].equals("+") || !operation[operation.length-1].equals("-") || !operation[operation.length-1].equals("x") || !operation[operation.length-1].equals("/")){
+            if (!operation.equals("") && !operation[operation.length-1].equals('+') && !operation[operation.length-1].equals('-') && !operation[operation.length-1].equals('x') && !operation[operation.length-1].equals('/')){
                 operation += "+"
                 display.setText(operation)
             }
@@ -128,7 +128,7 @@ class MainActivity : AppCompatActivity() {
 
         var _btnDivide = findViewById<Button>(R.id.division)
         _btnDivide.setOnClickListener {
-            if (!operation.equals("") || !operation[operation.length-1].equals("+") || !operation[operation.length-1].equals("-") || !operation[operation.length-1].equals("x") || !operation[operation.length-1].equals("/")){
+            if (!operation.equals("") && !operation[operation.length-1].equals('+') && !operation[operation.length-1].equals('-') && !operation[operation.length-1].equals('x') && !operation[operation.length-1].equals('/')){
                 operation += "/"
                 display.setText(operation)
             }
